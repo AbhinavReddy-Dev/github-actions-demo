@@ -12,11 +12,11 @@ jobs:
     steps:
       - name: Install dependencies
         run: |
-          yarn install
+          docker build -t github-actions-demo .
   build:
     needs: install
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - name: Build project
-        run: yarn start
+        run: docker run -p 8080:8080 -d github-actions-demo
