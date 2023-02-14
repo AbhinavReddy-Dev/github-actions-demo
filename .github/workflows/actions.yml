@@ -23,7 +23,7 @@ jobs:
   #       run: docker run -p github-actions-demo
 
 
-build:
+  build:
     name: Build
     runs-on: ubuntu-latest
     steps:
