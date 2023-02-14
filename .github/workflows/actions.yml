@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: Install dependencies
         run: |
-          docker build -t github-actions-demo .
+          docker build -t github-actions-demo ../
   build:
     needs: install
     runs-on: ubuntu-latest
