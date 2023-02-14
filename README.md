@@ -1,1 +1,2 @@
 # github-actions-demo
+[![Build TS Express](https://github.com/AbhinavReddy-Dev/github-actions-demo/actions/workflows/actions.yml/badge.svg)](https://github.com/AbhinavReddy-Dev/github-actions-demo/actions/workflows/actions.yml)
