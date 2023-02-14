@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "./src/index.ts",
   "scripts": {
-    "start": "ts-node ./src/index.ts"
+    "start": "npx ts-node ./src/index.ts"
   },
   "repository": "git@github.com:AbhinavReddy-Dev/github-actions-demo.git",
   "author": "AbhinavReddy-Dev <abhinavreddy9681@gmail.com>",
