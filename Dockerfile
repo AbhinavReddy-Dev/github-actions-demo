@@ -12,9 +12,9 @@ ENV WORKDIR=/sandbox
 COPY . ${WORKDIR}
 
 # install packages
-RUN npm update && \
-    npm install -g
+RUN yarn update && \
+    yarn install -g
 
 EXPOSE 8080
 
-CMD [ "npm", "start" ]
+CMD [ "yarn", "start" ]
