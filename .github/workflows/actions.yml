@@ -9,25 +9,15 @@ on:
 jobs:
   install:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        # Run build for both Node version 12 and version 14
-        node-version: v17.x
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
       - name: Install dependencies
-          run: |
-          yarn install
+        run: |
+          docker build -t github-actions-demo ../
   build:
     needs: install
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        # Run build for both Node version 12 and version 14
-        node-version: [12.x, 14.x, v17.x]
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
       - name: Build project
-          run: yarn start
+        run: docker run -p github-actions-demo
