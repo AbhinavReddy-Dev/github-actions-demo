@@ -8,12 +8,14 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
       - uses: actions/checkout@v3
       - name: Install -> Build
+        uses: actions/setup-node@v2
+        with:
+          cache: 'npm'
         run: yarn build
-        cache: 'npm'
       
       
   # build:
