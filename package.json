@@ -4,7 +4,7 @@
   "main": "./src/index.ts",
   "scripts": {
     "start": "ts-node ./src/index.ts",
-    "build" : "tsc --project . && node ./dist/index.js"
+    "build" : "tsc --project ."
   },
   "repository": "git@github.com:AbhinavReddy-Dev/github-actions-demo.git",
   "author": "AbhinavReddy-Dev <abhinavreddy9681@gmail.com>",
