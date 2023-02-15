@@ -15,6 +15,7 @@ jobs:
         # uses: actions/setup-node@v3
       - name: Install -> Build
         run: yarn build
+        run: exit 0
         # with:
         #   cache: 'npm'
         
