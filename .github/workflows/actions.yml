@@ -14,8 +14,10 @@ jobs:
         uses: actions/checkout@v3
         # uses: actions/setup-node@v3
       - name: Install -> Build
-        run: yarn build
-        run: exit 0
+        run: | 
+             yarn install
+             yarn build
+             exit 0
         # with:
         #   cache: 'npm'
         
