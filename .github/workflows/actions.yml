@@ -10,8 +10,8 @@ jobs:
   build:
     runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v3
       - name: Install -> Build
+        uses: actions/checkout@v3
         uses: actions/setup-node@v2
         with:
           cache: 'npm'
