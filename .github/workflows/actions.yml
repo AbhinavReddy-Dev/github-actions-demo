@@ -12,11 +12,11 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-        uses: actions/setup-node@v3
+        # uses: actions/setup-node@v3
       - name: Install -> Build
         run: yarn build
-        with:
-          cache: 'npm'
+        # with:
+        #   cache: 'npm'
         
       
   # build:
