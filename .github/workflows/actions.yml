@@ -7,13 +7,15 @@ on:
     branches: [ main ]
 
 jobs:
-  # install:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v3
-  #     - name: Install dependencies
-  #       run: |
-  #         docker build -t github-actions-demo
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install -> Build
+        run: yarn build
+        cache: 'npm'
+      
+      
   # build:
   #   needs: install
   #   runs-on: ubuntu-latest
@@ -23,13 +25,13 @@ jobs:
   #       run: docker run -p github-actions-demo
 
 
-  build:
-    name: Build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-      - name: Build image
-        run: docker build -t github-actions-demo ../
-      - name: Launch container
-        run: docker run github-actions-demo 
+  # build:
+  #   name: Build
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Checkout code
+  #       uses: actions/checkout@v2
+  #     - name: Build image
+  #       run: docker build -t github-actions-demo ./
+  #     - name: Launch container
+  #       run: docker run github-actions-demo 

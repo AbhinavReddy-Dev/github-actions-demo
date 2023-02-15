@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "./src/index.ts",
   "scripts": {
-    "start": "ts-node ./src/index.ts"
+    "start": "ts-node ./src/index.ts",
+    "build" : "yarn install && tsc --project . && node ./dist/index.js"
   },
   "repository": "git@github.com:AbhinavReddy-Dev/github-actions-demo.git",
   "author": "AbhinavReddy-Dev <abhinavreddy9681@gmail.com>",
