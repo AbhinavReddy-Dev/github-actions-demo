@@ -1,6 +1,6 @@
 {
-  "name": "y",
-  "version": "y",
+  "name": "github-actions-demo",
+  "version": "1.0.0",
   "main": "./src/index.ts",
   "scripts": {
     "start": "ts-node ./src/index.ts",
