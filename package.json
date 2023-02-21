@@ -4,8 +4,9 @@
   "main": "./src/index.ts",
   "scripts": {
     "start": "ts-node ./src/index.ts",
-    "build" : "tsc --project . && node ./dist/index.js",
-    "github-ci" : "tsc --project ."
+    "build": "tsc --project . && node ./dist/index.js",
+    "github-ci": "tsc --project .",
+    "lint": "eslint --ignore-path .gitignore . --ext ts --ext tsx --ext js --ext jsx"
   },
   "repository": "git@github.com:AbhinavReddy-Dev/github-actions-demo.git",
   "author": "AbhinavReddy-Dev <abhinavreddy9681@gmail.com>",

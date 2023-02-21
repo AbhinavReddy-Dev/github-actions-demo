@@ -2,9 +2,9 @@ name: Build TS Express
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   build:
@@ -12,16 +12,15 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-      - name: Node setup  
+      - name: Node setup
         uses: actions/setup-node@v3
       - name: Install and Build for CI
-        run: | 
-             yarn install
-             yarn github-ci
+        run: |
+          yarn install
+          yarn github-ci
         # with:
         #   cache: 'npm'
-        
-      
+
   # build:
   #   needs: install
   #   runs-on: ubuntu-latest
@@ -29,7 +28,6 @@ jobs:
   #     - uses: actions/checkout@v3
   #     - name: Build project
   #       run: docker run -p github-actions-demo
-
 
   # build:
   #   name: Build
@@ -40,4 +38,4 @@ jobs:
   #     - name: Build image
   #       run: docker build -t github-actions-demo ./
   #     - name: Launch container
-  #       run: docker run github-actions-demo 
+  #       run: docker run github-actions-demo

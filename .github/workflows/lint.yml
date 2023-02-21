@@ -1,0 +1,17 @@
+name: TS Lint
+
+on:
+  pull_request:
+    branches: [main, eslint]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    name: Eslint
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+      - run: yarn
+      - name: eslint
+      uses: icrawl/action-eslint@v3
+      - run: yarn lint
